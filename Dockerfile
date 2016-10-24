@@ -68,7 +68,7 @@ RUN cd /app \
     && chmod -R 755 /app/nzedb/app/libraries \
     && chmod -R 755 /app/nzedb/libraries \
     && chmod -R 777 /app/nzedb/resources \
-    && chmod -R 777 /app/nzedb/www \
+    && chmod -R 777 /app/nzedb/www
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
