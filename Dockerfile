@@ -41,7 +41,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C \
     && rm -rf /etc/nginx/sites-enabled/default \
     && mkdir -p /run/php \
     && sed -i '/^;clear_env = no/s/^;//' /etc/php/7.0/fpm/pool.d/www.conf \
-    && wget -P /usr/local/bin https://godist.herokuapp.com/projects/ddollar/forego/releases/current/linux-amd64/forego \
+    && wget -P /usr/local/bin https://github.com/jwilder/forego/releases/download/v0.16.1/forego \
     && chmod u+x /usr/local/bin/forego \
     && echo "daemon off;" >> /etc/nginx/nginx.conf \
     && sed -i 's/^http {/&\n    server_names_hash_bucket_size 64;/g' /etc/nginx/nginx.conf
