@@ -36,6 +36,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C \
       lame \
       ffmpeg \
       libav-tools \
+      build-essential \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /etc/nginx/sites-enabled/default \
