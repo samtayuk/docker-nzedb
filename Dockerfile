@@ -72,6 +72,8 @@ RUN cd /app \
     && chmod -R 755 /app/nzedb/libraries \
     && chmod -R 777 /app/nzedb/resources \
     && chmod -R 777 /app/nzedb/www \
+    && mv /app/nzedb/nzedb/config /app/nzedb/nzedb/config-sample \
+    && ln -s /config /app/nzedb/nzedb/config
     && chmod -R 777 /app/nzedb/nzedb/config
 
 # forward request and error logs to docker log collector
