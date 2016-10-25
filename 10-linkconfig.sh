@@ -31,7 +31,7 @@ if [ ! -d '/data/covers' ]; then
     chmod -R 777 /data/covers
 fi
 
-if [ ! -d '/app/nzedb/nzedb/config' ]; then
+if [ -d '/app/nzedb/nzedb/config' ]; then
     echo "  ** Removing old config dir link"
     rm -R /app/nzedb/nzedb/config
 fi
@@ -41,7 +41,7 @@ ln -s /config /app/nzedb/nzedb/config
 chown www-data:www-data /app/nzedb/nzedb/config
 
 
-if [ ! -d '/app/nzedb/resources/covers' ]; then
+if [ -d '/app/nzedb/resources/covers' ]; then
     echo "  ** Removing old config dir link"
     rm -R /app/nzedb/resources/covers
 fi
