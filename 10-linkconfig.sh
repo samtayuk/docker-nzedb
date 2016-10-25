@@ -26,7 +26,7 @@ fi
 
 if [ ! -e '/data/covers' ]; then
     echo "  ** Copying default covers dir"
-    cp /app/nzedb/resources/covers-sample /data/covers
+    cp -R /app/nzedb/resources/covers-sample /data/covers
     chown www-data:www-data /data/covers
     chmod -R 777 /data/covers
 fi
