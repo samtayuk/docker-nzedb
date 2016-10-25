@@ -23,3 +23,12 @@ else
   cp /app/nzedb/nzedb/config-sample/Configure.php /config/Configure.php
   chown www-data:www-data /config/Configure.php
 fi
+
+if [ ! -e '/app/nzedb/nzedb/config' ]; then
+    echo "  ** Removing old link"
+    rm /app/nzedb/nzedb/config
+fi
+
+echo "  ** linking conf dir"
+ln -s /config /app/nzedb/nzedb/config
+chown www-data:www-data /app/nzedb/nzedb/config
